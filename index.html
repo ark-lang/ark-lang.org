@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>alloy-lang.org</title>
+
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+	</head>
+
+	<body>
+		<div class="slab">
+			<div class="container">
+				<div class="wrapper">
+					<h1 class="lead">alloy<span class="sm">v0.0.6</span></h1>
+					<p>
+						A systems programming language.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-full">
+					<section>
+						<h1>About Alloy</h1>
+						<p>
+							Alloy is a systems programming language. It started off as a small, experimental
+							side-project of mine to learn more about compilers. My original goal with Alloy
+							is to make a cleaner C without deviating from C's original goals of simplicity.
+						</p>
+					</section>
+
+					<section>
+						<h1>Goals</h1>
+						<ul>
+							<li>Fast</li>
+							<li>Multi-Paradigm</li>
+							<li>Strongly Typed</li>
+							<li>Concise, clean, and semantic syntax</li>
+							<li>No garbage collection</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>How it looks</h1>
+						<pre><code class="rust">// binding for c's printf
+fn printf(format: str, _): int;
+
+fn main(): int {
+	printf("Hello, World\b");
+	return 0;
+}</code></pre>
+					</section>
+
+					<section>
+						<h1>What it can produce</h1>
+						<p>
+							Here's a 3D cube being rendered using SDL2 and OpenGL
+							in Alloy.
+						</p>
+						<video class="responsive-video" controls autoplay loop>
+							<source src="alloy.webm" type="video/mp4">
+							HTML5 video unsupported! :(
+						</video>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/languages/rust.min.js"></script>
+		<script>
+		hljs.initHighlightingOnLoad();
+		</script>
+	</body>
+
+</html>
