@@ -38,7 +38,7 @@ body {
 	width: 100%;
 	height: 100%;
     background: #fff;
-	font: 14pt 'Noto Sans', Verdana, Arial, san-serif;
+	font: 14pt 'Noto Sans', Verdana, Arial, sans-serif;
 }
 
 code, pre {
@@ -129,4 +129,49 @@ code, pre {
 
 section {
 	margin-bottom: 30px;
+}
+
+.navigation {
+	display: block;
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+hr {
+	height: 0;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #eee;
+}
+
+.navigation ul {
+	list-style-type: none;
+	width: 100%;
+}
+
+.navigation ul li {
+	float: left;
+	margin-right: 10px;
+	padding: 5px;
+	padding-left: 0;
+}
+
+.navigation ul li a {
+	color: #546E7A;
+	text-decoration: none;
+	font: 14pt 'Noto Sans', Verdana, Arial, sans-serif;
+	font-weight: bold;
+    -webkit-transition: 350ms ease all;
+       -moz-transition: 350ms ease all;
+    	-ms-transition: 350ms ease all;
+    	 -o-transition: 350ms ease all;
+    		transition: 350ms ease all;
+}
+
+.navigation ul li a:hover {
+	color: #888;
 }
