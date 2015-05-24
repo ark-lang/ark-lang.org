@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>alloy-lang.org</title>
+		<title>ark-lang.org</title>
 
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
@@ -16,7 +16,7 @@
 		<div class="slab">
 			<div class="container">
 				<div class="wrapper">
-					<h1 class="lead">alloy<span class="sm">v0.0.6</span></h1>
+					<h1 class="lead">ark<span class="sm">v0.0.8</span></h1>
 					<p>
 						A systems programming language.
 					</p>
@@ -29,20 +29,20 @@
 				<div class="col-full">
 					<nav class="navigation">
 						<ul>
-							<li><a target="_blank" href="//www.github.com/alloy-lang/alloy">GitHub</a></li>
-							<li><a target="_blank" href="//www.github.com/alloy-lang/alloy/tree/master/docs/REFERENCE.md">Documentation</a></li>
-							<li><a target="_blank" href="//www.github.com/alloy-lang/alloy/tree/master/docs/STYLEGUIDE.md">Style Guide</a></li>
-							<li><a target="_blank" href="//webchat.freenode.net/?channels=%23alloy-lang">IRC</a></li>
+							<li><a target="_blank" href="//www.github.com/ark-lang/ark">GitHub</a></li>
+							<li><a target="_blank" href="https://github.com/ark-lang/ark/blob/master/docs/REFERENCE.md">Documentation</a></li>
+							<li><a target="_blank" href="//www.github.com/ark-lang/ark/tree/master/docs/STYLEGUIDE.md">Style Guide</a></li>
+							<li><a target="_blank" href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
 						</ul>
 					</nav>
 
 					<hr>
 
 					<section>
-						<h1>About Alloy</h1>
+						<h1>About Ark</h1>
 						<p>
-							Alloy is a systems programming language. It started off as a small, experimental
-							side-project of mine to learn more about compilers. My original goal with Alloy
+							Ark is a systems programming language. It started off as a small, experimental
+							side-project of mine to learn more about compilers. My original goal with Ark
 							is to make a cleaner C without deviating from C's original goals of simplicity.
 						</p>
 					</section>
@@ -60,23 +60,36 @@
 
 					<section>
 						<h1>How it looks</h1>
-						<pre><code class="rust">// binding for c's printf
-fn printf(format: str, _): int;
+						<pre><code class="go">// binding for c's printf
+func printf(format: str, _): int;
 
-fn main(): int {
+func main(): int {
 	printf("Hello, World\b");
 	return 0;
 }</code></pre>
 					</section>
 
 					<section>
+						<h1>Programming some Ark</h1>
+						<p>
+							Here's a small video of me programming a simple
+							program in Ark. This is from version 0.0.6, so
+							things may be a little out-dated.
+						</p>
+						<video class="responsive-video" controls autoplay loop>
+							<source src="programming.mp4" type="video/mp4">
+							HTML5 video unsupported! :(
+						</video>
+					</section>
+
+					<section>
 						<h1>What it can produce</h1>
 						<p>
 							Here's a 3D cube being rendered using SDL2 and OpenGL
-							in Alloy.
+							in Ark.
 						</p>
 						<video class="responsive-video" controls autoplay loop>
-							<source src="alloy.webm" type="video/mp4">
+							<source src="ark.webm" type="video/mp4">
 							HTML5 video unsupported! :(
 						</video>
 					</section>
