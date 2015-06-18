@@ -12,6 +12,12 @@ html {
 	padding: 0;
 }
 
+pre {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+}
+
 ul { 
    list-style-type: circle; 
    list-style-position: inside; 
