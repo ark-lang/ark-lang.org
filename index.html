@@ -18,7 +18,7 @@
 				<div class="wrapper">
 					<h1 class="lead">ark<span class="sm">v0.0.2</span></h1>
 					<p>
-						A systems programming language.
+						A modern systems programming language.
 					</p>
 				</div>
 			</div>
@@ -41,9 +41,14 @@
 					<section>
 						<h1>About Ark</h1>
 						<p>
-							Ark is a systems programming language. It started off as a small, experimental
-							side-project of mine to learn more about compilers. My original goal with Ark
-							is to make a cleaner C without deviating from C's original goals of simplicity.
+							Compilers, compiler design and programming language design have been vastly improved since languages
+							such as C were first invented, as has the software that we write in these languages. Many new concepts
+							have been added to languages like C++ and C, yet they have maintained backwards compatibility, including
+							the flaws of these languages.
+						</p>
+						<p>
+							Ark exists to include all of these modern features, and improvements that have occured in the last <span id="c_age"></span> years;
+							yet exclude all of the ugly flaws present in languages like C and C++.
 						</p>
 					</section>
 
@@ -61,10 +66,10 @@
 					<section>
 						<h1>How it looks</h1>
 						<pre><code class="ark">// binding for c's printf
-func printf(format: str, _): int;
+[c] func printf(format: str, ...): int;
 
 func main(): int {
-	printf("Hello, World\b");
+	printf("Hello, World\n");
 	return 0;
 }</code></pre>
 					</section>
@@ -73,8 +78,7 @@ func main(): int {
 						<h1>Programming some Ark</h1>
 						<p>
 							Here's a small video of me programming a simple
-							program in Ark. This is from version 0.0.6, so
-							things may be a little out-dated.
+							program in Ark.
 						</p>
 						<video class="responsive-video" controls autoplay loop>
 							<source src="//alloy-lang.org/ark-test.webm" type="video/mp4">
@@ -86,8 +90,14 @@ func main(): int {
 						<h1>What it can produce</h1>
 						<p>
 							Here's a 3D cube being rendered using SDL2 and OpenGL
-							in Ark.
+							in Ark. 
 						</p>
+						<small>
+							Note this is from an earlier version of Ark, and
+							as the language is constantly undergoing development, we
+							cannot promise this will work if you were to clone the repository!
+						</small>
+
 						<video class="responsive-video" controls autoplay loop>
 							<source src="ark.webm" type="video/mp4">
 							HTML5 video unsupported! :(
@@ -101,6 +111,14 @@ func main(): int {
 		<script src="ark.min.js"></script>
 		<script>
 		hljs.initHighlightingOnLoad();
+
+		function _calculateAge(birthday) { // birthday is a date
+		    var ageDifMs = Date.now() - birthday.getTime();
+		    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+		    return Math.abs(ageDate.getUTCFullYear() - 1970);
+		}
+
+		document.getElementById('c_age').innerHTML = _calculateAge(new Date(1972, 1, 1));
 		</script>
 	</body>
 
