@@ -1,21 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|Noto+Serif:400,700,400italic,700italic);
 
-/** RESET THEN SET BACK SOME STUFF */
-
-html {
-	box-sizing: border-box;
-	overflow-y: scroll;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
 }
 
 pre {
+	border: 1px solid #BDBDBD;
+	padding: 5px;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
+	border-radius: 2px;
 }
 
 ul { 
@@ -48,7 +49,7 @@ body {
 }
 
 code, pre {
-	background: #CFD8DC !important;
+	background: #FAFAFA !important;
 }
 
 /** "BACKEND" CSS */
@@ -61,6 +62,7 @@ code, pre {
 .row {
 	margin-right: -15px;
 	margin-left: -15px;
+	margin-bottom: 30px;
 }
 
 .col-half, .col-full {
@@ -100,7 +102,10 @@ code, pre {
 /** ACTUAL STYLES */
 
 .lead {
-	font-size: 64px;
+	font-size: 24pt;
+	text-align: center;
+	font-style: italic;
+	padding: 15px;
 }
 
 .wrapper {
@@ -133,8 +138,13 @@ code, pre {
 	text-align: center;
 }
 
-section {
+section, article {
+	margin-top: 30px;
 	margin-bottom: 30px;
+}
+
+p {
+	margin-bottom: 15px;
 }
 
 .navigation {
@@ -164,6 +174,11 @@ hr {
 	margin-right: 10px;
 	padding: 5px;
 	padding-left: 0;
+}
+
+a {
+	color: #009688;
+	text-decoration: none;
 }
 
 .navigation ul li a {

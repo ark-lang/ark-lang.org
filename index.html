@@ -13,96 +13,55 @@
 	</head>
 
 	<body>
-		<div class="slab">
-			<div class="container">
-				<div class="wrapper">
-					<h1 class="lead">ark<span class="sm">v0.0.2</span></h1>
-					<p>
-						A modern systems programming language.
-					</p>
-				</div>
-			</div>
-		</div>
-
 		<div class="container">
 			<div class="row">
 				<div class="col-full">
-					<nav class="navigation">
-						<ul>
-							<li><a target="_blank" href="//www.github.com/ark-lang/ark">GitHub</a></li>
-							<li><a target="_blank" href="//github.com/ark-lang/ark-docs/blob/master/STYLEGUIDE.md">Style Guide</a></li>
-							<li><a target="_blank" href="//github.com/ark-lang/ark-docs/blob/master/REFERENCE.md">Documentation</a></li>
-							<li><a target="_blank" href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
-						</ul>
-					</nav>
+					<p class="lead">
+						<b>Ark</b> is a fast, powerful, yet simple systems programming language.
+					</p>
+				</div>
+			</div>
 
-					<hr>
+			<div class="row">
+				<div class="col-full">
+					<h2>Contribute</h2>
+					<p>
+						Ark is <b>open source</b>, and can be found on <a target="_tab" href="//github.com/ark-lang/ark">GitHub</a>!
+						Send us a pull request, comment on some existing issues, propose a feature, or find
+						some bugs and report your findings in the issue handler! You can also find many resources
+						on our organisation page, such as the <a target="_tab" href="//github.com/ark-lang/ark-docs">Documentation</a>,
+						and various examples &amp; syntax highlighting for your editor.
+					</p>
+				</div>
+			</div>
 
-					<section>
-						<h1>About Ark</h1>
-						<p>
-							Compilers, compiler design and programming language design have been vastly improved since languages
-							such as C were first invented, as has the software that we write in these languages. Many new concepts
-							have been added to languages like C++ and C, yet they have maintained backwards compatibility, including
-							the flaws of these languages.
-						</p>
-						<p>
-							Ark exists to include all of these modern features, and improvements that have occured in the last <span id="c_age"></span> years;
-							yet exclude all of the ugly flaws present in languages like C and C++.
-						</p>
-					</section>
+			<div class="row">
+				<div class="col-half">
+					<h2>Why?</h2>
+					<p>
+						Our goal is to write a modern systems programming language
+						that adopts many modern concepts and advancements in the field
+						of compilers and language design over the past <span id="c_age"></span>
+						years.
+					</p>
+					<p>
+						We want a language that has just enough features for programming
+						systems, yet not too many that the language is hard to learn.
+					</p>
+				</div>
 
-					<section>
-						<h1>Goals</h1>
-						<ul>
-							<li>Fast</li>
-							<li>Multi-Paradigm</li>
-							<li>Strongly Typed</li>
-							<li>Concise, clean, and semantic syntax</li>
-							<li>No garbage collection</li>
-						</ul>
-					</section>
-
-					<section>
-						<h1>How it looks</h1>
-						<pre><code class="ark">// binding for c's printf
+				<div class="col-half">
+					<h2>Example</h2>
+					<p>
+						Here's a small program written in Ark.
+					</p>
+					<pre><code class="ark">// binding for c's printf
 [c] func printf(format: str, ...): int;
 
 func main(): int {
 	printf("Hello, World\n");
 	return 0;
 }</code></pre>
-					</section>
-
-					<section>
-						<h1>Programming some Ark</h1>
-						<p>
-							Here's a small video of me programming a simple
-							program in Ark.
-						</p>
-						<video class="responsive-video" controls autoplay loop>
-							<source src="//alloy-lang.org/ark-test.webm" type="video/mp4">
-							HTML5 video unsupported! :(
-						</video>
-					</section>
-
-					<section>
-						<h1>What it can produce</h1>
-						<p>
-							Here's a 3D cube being rendered using SDL2 and OpenGL
-							in Ark. 
-						</p>
-						<small>
-							Note this is from an earlier version of Ark, and
-							as the language is constantly undergoing development, we
-							cannot promise this will work if you were to clone the repository!
-						</small>
-
-						<video class="responsive-video" controls autoplay loop>
-							<source src="ark.webm" type="video/mp4">
-							HTML5 video unsupported! :(
-						</video>
-					</section>
 				</div>
 			</div>
 		</div>
