@@ -9,7 +9,7 @@
 		<title>ark-lang.org</title>
 
 		<link rel="stylesheet" href="css/style.css?v=5" type="text/css">
-		<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">-->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
 	</head>
 
 	<body>
@@ -43,14 +43,19 @@
 						<div class="col-half">
 							<h2>Why?</h2>
 							<p>
-								Our goal is to write a modern systems programming language
+								Our goal is to write a systems programming language
 								that adopts many modern concepts and advancements in the field
 								of compilers and language design over the past <span id="c_age"></span>
 								years.
 							</p>
 							<p>
-								We want a language that has just enough features for programming
-								systems, yet not too many that the language is hard to learn.
+								Languages such as C and C++ strive for backwards compatibility
+								when adopting new features, including compatibility for flaws
+								in the languages design. 
+							</p>
+							<p>
+								We want to fight this with a language
+								that fixes these weaknesses in the aforementioned languages.
 							</p>
 						</div>
 
@@ -59,12 +64,17 @@
 							<p>
 								Here's a small program written in Ark.
 							</p>
-							<pre><code class="ark">// binding for c's printf
-[c] func printf(format: str, ...): int;
+							<pre><code class="ark">[c] func printf(fmt: str, ...);
 
 func main(): int {
-	printf("Hello, World\n");
-	return 0;
+    mut i := 0;
+
+    for i &lt; 5 {
+        printf("i: %d\n", i);
+        i = i + 1;
+    }
+
+    return 0;
 }</code></pre>
 						</div>
 					</div>
@@ -72,8 +82,8 @@ func main(): int {
 			</div>
 		</div>
 
-		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> -->
-		<!-- <script src="ark.min.js"></script> -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+		<script src="ark.min.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script>
 
