@@ -41,7 +41,6 @@ ol ol, ul ol {
 }
 
 body {
-	width: 100%;
 	height: 100%;
     background: #fff;
 	font: 14pt 'Noto Sans', Verdana, Arial, sans-serif;
@@ -64,7 +63,7 @@ code, pre {
 	margin-bottom: 30px;
 }
 
-.col-half, .col-full {
+.col-hex, .col-duo, .col-quad, .col-oct {
 	position: relative;
 	min-height: 1px;
 	padding-right: 15px;
@@ -72,15 +71,25 @@ code, pre {
 }
 
 @media (min-width: 992px) {
-	.col-full {
+	.col-duo {
 		float: left;
 		width: 100%;
 	}
 
-	.col-half {
+	.col-hex {
 		float: left;
 		width: 50%;
 	}
+
+    .col-quad {
+        float: left;
+        width: 33.3333333%;
+    }
+
+    .col-oct {
+        float: left;
+        width: 66.6666666%;
+    }
 }
 
 .center {
@@ -104,19 +113,7 @@ code, pre {
 	font-size: 24pt;
 	text-align: center;
 	font-style: italic;
-	padding: 15px;
-}
-
-.wrapper {
-	display: table;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
-
-.block {
-	display: table-cell;
-	vertical-align: middle;
+	padding-top: 15px;
 }
 
 .slab {
@@ -126,25 +123,36 @@ code, pre {
 }
 
 .container {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 25px;
+    display: block;
+    margin: 20px auto;
+	padding: 15px;
+    max-width: 820px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+.link-list {
+    display: inline-block;
+    width: 50%;
+    float: left;
 }
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+
+nav ul li {
+    list-style: none;
+    line-height: 1.5em;
 }
-@media (min-width: 1200px) {
-  .container {
-    width: 970px;
-  }
+
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
+}
+
+@media (min-width: 992px)
+.container {
+  width: 970px;
+}
+
+@media (min-width: 768px)
+.container {
+  width: 100%;
 }
 
 .title {
@@ -192,7 +200,11 @@ hr {
 a {
 	color: #009688;
 	text-decoration: none;
-	font-weight: 800;
+	font-weight: thin;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .navigation ul li a {

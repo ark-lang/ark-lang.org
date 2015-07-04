@@ -23,60 +23,69 @@
 
 	<body>
 
-		<div class="wrapper">
-			<a href="//github.com/ark-lang/ark"><img style="position: absolute; top: 0; left: 0; border: 0;" src="//camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="//s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-duo">
+					<p class="lead">
+						<b>Ark</b> is a<span id="lang_desc"></span> systems programming language.
+					</p>
+				</div>
+			</div>
 
-			<div class="block">
-				<div class="container">
-					<div class="row">
-						<div class="col-full">
-							<p class="lead">
-								<b>Ark</b> is a<span id="lang_desc"></span> systems programming language.
-							</p>
-						</div>
-					</div>
+			<div class="row">
+				<div class="col-hex">
+					<h3>Ark Resources</h3>
+					<nav class="link-list">
+						<ul>
+							<li><a target="_tab" href="//github.com/ark-lang/ark-docs/blob/master/REFERENCE.md">Reference</a></li>
+							<li><a target="_tab" href="//github.com/ark-lang/ark-docs/blob/master/STYLEGUIDE.md">Style Guide</a></li>
+							<li><a target="_tab" href="//github.com/ark-lang/ark-docs">All Documentation</a></li>
+							<li><a target="_tab" href="//github.com/ark-lang/ark/blob/master/CONTRIBUTING.md">Contributor Guide</a></li>
+						</ul>
+					</nav>
+				</div>
 
-					<div class="row">
-						<div class="col-full">
-							<h2>Contribute</h2>
-							<p>
-								Ark is <b>open source</b>, and can be found on <a target="_blank" href="//github.com/ark-lang/ark">GitHub</a>!
-								Send us a pull request, comment on some existing issues, propose a feature, or find
-								some bugs and report your findings in the issue handler! You can also find many resources
-								on our organisation page, such as the <a target="_blank" href="//github.com/ark-lang/ark-docs">Documentation</a>,
-								and various examples &amp; syntax highlighting for your editor. You can also join us on <a target="_blank" href="//webchat.freenode.net/?channels=%23ark-lang">IRC (#ark-lang)</a>.
-							</p>
-						</div>
-					</div>
+				<div class="col-hex">
+					<h3>Community</h3>
+					<nav class="link-list">
+						<ul>
+							<li><a target="_tab" href="//github.com/ark-lang/">GitHub</a></li>
+							<li><a target="_tab" href="//github.com/ark-lang/ark-docs/blob/master/REFERENCE.md">IRC</a></li>
+							<li><a target="_tab" href="//github.com/ark-lang/ark-docs/blob/master/STYLEGUIDE.md">Reddit</a></li>
+							<li><a target="_tab" href="//blog.ark-lang.org">Blog</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 
-					<div class="row">
-						<div class="col-half">
-							<h2>Why?</h2>
-							<p>
-								Our goal is to write a systems programming language
-								that adopts many modern concepts and advancements in the field
-								of compilers and language design over the past <span id="c_age"></span>
-								years.
-							</p>
-							<p>
-								Languages such as C and C++ strive for backwards compatibility
-								when adopting new features, including compatibility for flaws
-								in the languages design. 
-							</p>
-							<p>
-								We want to create a modern language that lacks many of the flaws of C
-								and C++ while still being suitable for low-level programming. It also
-								needs to be simple and intuitive enough to be easy to learn, write, read
-								and debug.
-							</p>
-						</div>
+			<div class="row">
+				<div class="col-hex">
+					<h2>Why?</h2>
+					<p>
+						Our goal is to write a systems programming language
+						that adopts many modern concepts and advancements in the field
+						of compilers and language design over the past <span id="c_age"></span>
+						years.
+					</p>
+					<p>
+						Languages such as C and C++ strive for backwards compatibility
+						when adopting new features, including compatibility for flaws
+						in the languages design. 
+					</p>
+					<p>
+						We want to create a modern language that lacks many of the flaws of C
+						and C++ while still being suitable for low-level programming. It also
+						needs to be simple and intuitive enough to be easy to learn, write, read
+						and debug.
+					</p>
+				</div>
 
-						<div class="col-half">
-							<h2>Example</h2>
-							<p>
-								Here's a small program written in Ark.
-							</p>
-							<pre><code class="ark">[c] func printf(fmt: str, ...);
+				<div class="col-hex">
+					<h2>Example</h2>
+					<p>
+						Here's a small program written in Ark.
+					</p>
+					<pre><code class="ark">[c] func printf(fmt: str, ...);
 
 func main(): int {
     mut i := 0;
@@ -88,8 +97,6 @@ func main(): int {
 
     return 0;
 }</code></pre>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
