@@ -204,6 +204,7 @@ a {
 }
 
 a:hover {
+    color: #455A64;
     text-decoration: underline;
 }
 
