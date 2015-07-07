@@ -223,3 +223,7 @@ a:hover {
 .navigation ul li a:hover {
 	color: #888;
 }
+
+.markdown h2 {
+    margin-top: 15px;
+}

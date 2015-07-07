@@ -27,7 +27,7 @@
             <?php include 'include/header.php'; ?>
 
             <div class="row">
-                <div class="col-duo">
+                <div class="col-duo markdown">
                     <?php 
 
                         // pls work
