@@ -71,10 +71,13 @@ code, pre {
 }
 
 @media (min-width: 992px) {
-	.col-duo {
+	.col-duo, .col-hex, .col-quad, .col-oct {
 		float: left;
-		width: 100%;
 	}
+
+    .col-duo {
+        width: 100%;
+    }
 
 	.col-hex {
 		float: left;
