@@ -80,17 +80,14 @@ code, pre {
     }
 
 	.col-hex {
-		float: left;
 		width: 50%;
 	}
 
     .col-quad {
-        float: left;
         width: 33.3333333%;
     }
 
     .col-oct {
-        float: left;
         width: 66.6666666%;
     }
 }
