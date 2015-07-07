@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-duo">
         <p class="lead">
-            <a href="../index.php"><b>Ark</b> is a<span id="lang_desc"></span> systems programming language.</a>
+            <a href="../index.php"><b>Ark</b> is a<span id="lang_desc"></span> systems programming language</a>
         </p>
     </div>
 </div>
