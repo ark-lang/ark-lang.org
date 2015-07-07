@@ -228,7 +228,7 @@ a:hover {
     margin: 15px 0;
 }
 
-.markdown ul {
+.markdown > ul {
     margin: 15px 5px;
 }
 
