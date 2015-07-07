@@ -11,10 +11,10 @@
         <h3>Ark Resources</h3>
         <nav class="link-list">
             <ul>
-                <li><a target="_tab" href="reference.php">Reference</a></li>
-                <li><a target="_tab" href="style.php">Style Guide</a></li>
+                <li><a href="reference.php">Reference</a></li>
+                <li><a href="style.php">Style Guide</a></li>
                 <li><a target="_tab" href="//github.com/ark-lang/ark-docs">All Documentation</a></li>
-                <li><a target="_tab" href="contributing.php">Contributor Guide</a></li>
+                <li><a href="contributing.php">Contributor Guide</a></li>
             </ul>
         </nav>
     </div>
