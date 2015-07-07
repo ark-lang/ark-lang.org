@@ -114,6 +114,9 @@ code, pre {
 	text-align: center;
 	font-style: italic;
 	padding-top: 15px;
+}
+
+.lead a:hover {
 	text-decoration: none;
 }
 
