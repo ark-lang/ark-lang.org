@@ -18,9 +18,9 @@
         <h3>Ark Resources</h3>
         <nav class="link-list">
             <ul>
-                <li><a href="reference.php">Reference (nightly)</a></li>
-                <li><a href="styleguide.php">Style Guide</a></li>
-                <li><a href="contributing.php">Contributor Guide</a></li>
+                <li><a href="/reference">Reference (nightly)</a></li>
+                <li><a href="/styleguide">Style Guide</a></li>
+                <li><a href="/contributing">Contributor Guide</a></li>
                 <li><a target="_tab" href="//github.com/ark-lang/ark-docs">All Documentation</a></li>
             </ul>
         </nav>
