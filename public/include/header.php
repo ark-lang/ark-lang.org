@@ -1,3 +1,10 @@
+<?php
+
+    require_once 'parsedown.php';
+    $parsedown = new Parsedown();
+
+?>
+
 <div class="row">
     <div class="col-duo">
         <p class="lead">

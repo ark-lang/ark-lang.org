@@ -31,7 +31,6 @@
                     <?php 
 
                         // pls work
-                        $parsedown = new Parsedown();
                         $reference_contents = file_get_contents("../ark-docs/STYLEGUIDE.md");
                         echo $parsedown->text($reference_contents);
 
