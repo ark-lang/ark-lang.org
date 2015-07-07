@@ -19,7 +19,7 @@
         <nav class="link-list">
             <ul>
                 <li><a href="reference.php">Reference</a></li>
-                <li><a href="style.php">Style Guide</a></li>
+                <li><a href="styleguide.php">Style Guide</a></li>
                 <li><a target="_tab" href="//github.com/ark-lang/ark-docs">All Documentation</a></li>
                 <li><a href="contributing.php">Contributor Guide</a></li>
             </ul>
