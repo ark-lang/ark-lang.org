@@ -225,5 +225,9 @@ a:hover {
 }
 
 .markdown h2 {
-    margin-top: 15px;
+    margin: 15px 5px;
+}
+
+.markdown ul {
+    margin: 15px 5px;
 }
