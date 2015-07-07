@@ -24,7 +24,7 @@
     <body>
 
         <div class="container">
-            <?php include 'includes/header.php'; ?>
+            <?php include 'include/header.php'; ?>
 
             <div class="row">
                 <div class="col-hex">
