@@ -17,11 +17,13 @@
             ga('send', 'pageview');
         </script>
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
     </head>
 
     <body>
+        <div class="slab"></div>
 
         <div class="container">
             <?php include 'include/header.php'; ?>

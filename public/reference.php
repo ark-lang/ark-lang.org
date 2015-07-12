@@ -17,16 +17,26 @@
             ga('send', 'pageview');
         </script>
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
     </head>
 
     <body>
+        <div class="slab"></div>
 
         <div class="container">
             <?php include 'include/header.php'; ?>
 
             <div class="row">
+                <div class="notice-block">
+                    <p class="italic">
+                        Note, this documentation is for the nightly build! It is pulled
+                        from the GitHub every 5 minutes. This means that the documentation
+                        can change at <b>any</b> given time, therefore the documentation
+                        can be outdated, or have errors. <a href="//github.com/ark-lang/ark-docs">You can help us fix that!</a>
+                    </p>
+                </div>
+
                 <div class="col-duo markdown">
                     <?php 
 
