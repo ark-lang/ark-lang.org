@@ -17,6 +17,8 @@
             ga('send', 'pageview');
         </script>
 
+        <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href="//fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
     </head>
