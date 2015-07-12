@@ -31,17 +31,12 @@ a:hover {
     text-decoration: none;
 }
 
-ul {
-    margin: 10px 0 20px 0;
-}
-
 ul li {
     margin: 3px 0 3px 20px;
 }
 
 ol li {
     margin-left: 20px;
-    padding: 2px 0;
 }
 
 pre, code {
