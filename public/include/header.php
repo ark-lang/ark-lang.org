@@ -20,9 +20,9 @@
         <li><a href="styleguide">Style Guide</a></li>
         <li><a href="contributing">Contributor Guide</a></li>
         <li class="nav-separator">//</li>
-        <li><a target="_tab" href="//github.com/ark-lang/">GitHub</a></li>
-        <li><a target="_tab" href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
-        <li><a target="_tab" href="//reddit.com/r/ark_lang">Reddit</a></li>
-        <li><a target="_tab" href="//blog.ark-lang.org">Blog</a></li>
+        <li><a href="//github.com/ark-lang/">GitHub</a></li>
+        <li><a href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
+        <li><a href="//reddit.com/r/ark_lang">Reddit</a></li>
+        <li><a href="//blog.ark-lang.org">Blog</a></li>
     </ul>
 </nav>
