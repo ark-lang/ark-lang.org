@@ -58,7 +58,7 @@
                     </p>
                     <pre><code class="ark">[c] func printf(fmt: str, ...);
 
-func main(): int {
+func main() -&gt; int {
     mut i := 0;
 
     for i &lt; 5 {
