@@ -56,7 +56,7 @@
                     <p>
                         Here's a small program written in Ark.
                     </p>
-                    <pre><code class="ark">[c] func printf(fmt: str, ...);
+                    <pre><code class="ark">[c] func printf(fmt: str, ...) -&gt; int;
 
 func main() -&gt; int {
     mut i := 0;
