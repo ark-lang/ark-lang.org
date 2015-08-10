@@ -27,7 +27,24 @@
         <div class="slab"></div>
 
         <div class="container">
-            <?php include 'include/header.php'; ?>
+            <nav class="nav-wrapper">
+                <ul class="nav">
+                    <li class="nav-logo">
+                        <div class="col-hex">
+                            <object class="logo" data="res/ark-logo.svg" type="image/svg+xml">
+                                <img src="res/logo-fb.png">
+                            </object>
+                        </div>
+                    </li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="//book.ark-lang.org">Reference</a></li>
+                    <li><a href="//github.com/ark-lang/">GitHub</a></li>
+                    <li><a href="//gitter.im/ark-lang/ark">Gitter</a></li>
+                    <li><a href="//reddit.com/r/ark_lang">Reddit</a></li>
+                    <li><a href="//blog.ark-lang.org">Blog</a></li>
+                    <li><a href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
+                </ul>
+            </nav>
 
             <div class="row">
                 <div class="col-hex">
@@ -72,7 +89,21 @@ func main() -&gt; int {
             </div>
         </div>
 
-        <?php include 'include/footer.php'; ?>
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="ark.min.js"></script>
+        <script>
+        hljs.initHighlightingOnLoad();
+
+        // so we can get the exact date since fuck it
+        function calculateAge(birthday) { // birthday is a date
+            var ageDifMs = Date.now() - birthday.getTime();
+            var ageDate = new Date(ageDifMs); // miliseconds from epoch
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+
+        $('#c_age').text(calculateAge(new Date(1972, 1, 1)));
+        </script>
     </body>
 
 </html>
