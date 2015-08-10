@@ -17,7 +17,7 @@
             ga('send', 'pageview');
         </script>
 
-        <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Noto+Sans:200,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href="//fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
@@ -26,29 +26,39 @@
     <body>
         <div class="slab"></div>
 
-        <div class="container">
-            <nav class="nav-wrapper">
-                <ul class="nav">
-                    <li class="nav-logo">
-                        <div class="col-hex">
-                            <object class="logo" data="res/ark-logo.svg" type="image/svg+xml">
-                                <img src="res/logo-fb.png">
-                            </object>
-                        </div>
-                    </li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="//book.ark-lang.org">Reference</a></li>
-                    <li><a href="//github.com/ark-lang/">GitHub</a></li>
-                    <li><a href="//gitter.im/ark-lang/ark">Gitter</a></li>
-                    <li><a href="//reddit.com/r/ark_lang">Reddit</a></li>
-                    <li><a href="//blog.ark-lang.org">Blog</a></li>
-                    <li><a href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
-                </ul>
-            </nav>
+        <nav class="nav-wrapper">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="//book.ark-lang.org">Reference</a></li>
+                <li><a href="//github.com/ark-lang/">GitHub</a></li>
+                <li><a href="//gitter.im/ark-lang/ark">Gitter</a></li>
+                <li><a href="//reddit.com/r/ark_lang">Reddit</a></li>
+                <li><a href="//blog.ark-lang.org">Blog</a></li>
+                <li><a href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
+            </ul>
+        </nav>
 
+        <div class="container">
             <div class="row">
+                <h1 class="title">Ark Programming Language</h1>
+                <p>
+                    Ark is an open-source systems programming language. The language is written in Go
+                    and compiles to LLVM IR.
+                </p>
+
                 <div class="col-hex">
-                    <h2>Why?</h2>
+                    <h2>Language Goals</h2>
+                    <p>
+                        <ul>
+                            <li>Fast</li>
+                            <li>Multi-Paradigm</li>
+                            <li>Strongly Typed</li>
+                            <li><b>No</b> garbage collection</li>
+                            <li>Uses modern language concepts</li>
+                        </ul>
+                    </p>
+
+                    <h2>Why another language?</h2>
                     <p>
                         Our goal is to write a systems programming language
                         that adopts many modern concepts and advancements in the field
@@ -71,16 +81,36 @@
                 <div class="col-hex">
                     <h2>Example</h2>
                     <p>
-                        Here's a small program written in Ark.
+                        Here's a simple program in Ark:
                     </p>
-                    <pre><code class="ark">[c] func printf(fmt: str, ...) -&gt; int;
+                    <pre><code class="ark">[c] func printf(fmt: str, ...);
+[c] func rand() -&gt; int;
+[c] func srand(i: uint);
+[c] func time(ptr: u32) -&gt; u64;
+[c] func scanf(fmt: str, ...);
+
+func println(mess: str) =&gt; C::printf("%s\n", mess);
 
 func main() -&gt; int {
-    mut i := 0;
+    println("Higher or lower game, in Ark!");
 
-    for i &lt; 5 {
-        C::printf("i: %d\n", i);
-        i = i + 1;
+    C::srand(uint(C::time(0)));
+
+    num := C::rand() % 100 + 1;
+
+    for {
+        println("\nEnter a number between 1 and 100 (inclusive):");
+        mut guess: int;
+        C::scanf("%d", &amp;guess);
+
+        if guess == num {
+            println("You win!");
+            return 0;
+        } else if guess &lt; num {
+            println("Guess higher!");
+        } else {
+            println("Guess lower!");
+        }
     }
 
     return 0;
