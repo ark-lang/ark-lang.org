@@ -1,138 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>ark-lang.org</title>
+<head>
+  <meta charset="utf-8">
+  <title>ark-lang.org</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
 
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            
-            ga('create', 'UA-64503427-1', 'auto');
-            ga('send', 'pageview');
-        </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
 
-        <link href='//fonts.googleapis.com/css?family=Noto+Sans:200,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href="//fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css" type="text/css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
-    </head>
+  <link rel="icon" type="image/png" href="images/logo-fb.png">
 
-    <body>
-        <div class="slab"></div>
+  <style type="text/css">
+  .row {
+    margin-top: 2%;
+  }
+  .nav li {
+    float: left;
+    list-style: none;
+    padding: 5px 8px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  </style>
+</head>
 
-        <nav class="nav-wrapper">
-            <ul class="nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="//book.ark-lang.org">Reference</a></li>
-                <li><a href="//github.com/ark-lang/">GitHub</a></li>
-                <li><a href="//reddit.com/r/ark_lang">Reddit</a></li>
-                <li><a href="//blog.ark-lang.org">Blog</a></li>
-                <li><a href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a></li>
-            </ul>
-        </nav>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="three columns">
+        <h1>ark-lang.org</h1>
+      </div>
+      <div class="nine columns">
+        <a class="button button-primary" href="//github.com/ark-lang/ark">GitHub</a>
+        <a class="button button-primary" href="//reddit.com/r/ark_lang">Reddit</a>
+        <a class="button button-primary" href="//webchat.freenode.net/?channels=%23ark-lang">IRC</a>
+        <a class="button button-primary" href="//book.ark-lang.org">Book</a>
+        <a class="button button-primary" href="//blog.ark-lang.org">Blog</a>
+      </div>
+    </div>
 
-        <div class="container">
-            <div class="row">
-                <h1 class="title">Ark Programming Language</h1>
-                <p>
-                    Ark is an open-source systems programming language. The language is written in Go
-                    and compiles to LLVM IR.
-                </p>
+    <div class="row">
+      <div class="one-half column">
+        <h4>What is Ark?</h4>
+        <p>
+          Ark is a systems programming language
+          focused on being practical and pragmatic.
+          We want the language to be simple, and
+          adopt many of the modern concepts used in
+          languages today. Language design has come
+          a long way since the creation of C.
+        </p>
+      </div>
+      <div class="one-half column">
+        <h4>Hello, World!</h4>
+        <pre><code class="ark">#use std
 
-                <div class="col-hex">
-                    <h2>Language Goals</h2>
-                    <p>
-                        <ul>
-                            <li>Fast</li>
-                            <li>Multi-Paradigm</li>
-                            <li>Strongly Typed</li>
-                            <li><b>No</b> garbage collection</li>
-                            <li>Uses modern language concepts</li>
-                        </ul>
-                    </p>
-
-                    <h2>Why another language?</h2>
-                    <p>
-                        Our goal is to write a systems programming language
-                        that adopts many modern concepts and advancements in the field
-                        of compilers and language design over the past <span id="c_age"></span>
-                        years.
-                    </p>
-                    <p>
-                        Languages such as C and C++ strive for backwards compatibility
-                        when adopting new features, including compatibility for flaws
-                        in the languages design. 
-                    </p>
-                    <p>
-                        We want to create a modern language that lacks many of the flaws of C
-                        and C++ while still being suitable for low-level programming. It also
-                        needs to be simple and intuitive enough to be easy to learn, write, read
-                        and debug.
-                    </p>
-                </div>
-
-                <div class="col-hex">
-                    <h2>Example</h2>
-                    <p>
-                        Here's a simple program in Ark:
-                    </p>
-                    <pre><code class="ark">[c] func printf(fmt: str, ...);
-[c] func rand() -&gt; int;
-[c] func srand(i: uint);
-[c] func time(ptr: u32) -&gt; u64;
-[c] func scanf(fmt: str, ...);
-
-func println(mess: str) =&gt; C::printf("%s\n", mess);
-
-func main() -&gt; int {
-    println("Higher or lower game, in Ark!");
-
-    C::srand(uint(C::time(0)));
-
-    num := C::rand() % 100 + 1;
-
-    for {
-        println("\nEnter a number between 1 and 100 (inclusive):");
-        mut guess: int;
-        C::scanf("%d", &amp;guess);
-
-        if guess == num {
-            println("You win!");
-            return 0;
-        } else if guess &lt; num {
-            println("Guess higher!");
-        } else {
-            println("Guess lower!");
-        }
-    }
-
-    return 0;
+func main() -> int {
+  io::println("Hello, world!");
+  return 0;          
 }</code></pre>
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
 
-        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="ark.min.js"></script>
-        <script>
-        hljs.initHighlightingOnLoad();
+    <div class="row">
+      <div class="column">
+        <h4>Contribute</h4>
+        <p>
+          Ark is completely Open Source, including this website! If you want to help in
+          any way, go check out our GitHub. You can contribute in various ways, including
+          (but not limited to):
+          <ul>
+            <li>Code contributions to the compiler, arkade, this website (or any other project on the GitHub)</li>
+            <li>Testing the compiler to find and report bugs on the issue handler</li>
+            <li>Writing documentation</li>
+            <li>Your voice on Request For Comments (RFCs), or on IRC/SubReddit!</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
 
-        // so we can get the exact date since fuck it
-        function calculateAge(birthday) { // birthday is a date
-            var ageDifMs = Date.now() - birthday.getTime();
-            var ageDate = new Date(ageDifMs); // miliseconds from epoch
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        }
+  <!-- google analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-64503427-1', 'auto');
+      ga('send', 'pageview');
+  </script>
 
-        $('#c_age').text(calculateAge(new Date(1972, 1, 1)));
-        </script>
-    </body>
+  <!-- code stuff -->
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="js/ark.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 
+</body>
 </html>
