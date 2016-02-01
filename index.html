@@ -27,6 +27,10 @@
   h1 {
     font-size: 32px;
   }
+  .fitted {
+    width: 100%;
+    height: auto;
+  }
   </style>
 </head>
 
@@ -49,22 +53,83 @@
       <div class="one-half column">
         <h4>What is Ark?</h4>
         <p>
-          Ark is a systems programming language
-          focused on being practical and pragmatic.
-          We want the language to be simple, and
-          adopt many of the modern concepts used in
-          languages today. Language design has come
-          a long way since the creation of C.
+          Ark is a systems programming language focused on being practical and pragmatic.
+          We want a language that is simple, easy to write, yet powerful enough to create
+          readable, performant and concise code for any problem.
+          Ark aims to adopt various features that complement one another, working together
+          in perfect harmony:
+          <ul>
+            <li>Pattern Matching</li>
+            <li>Implicit Interfaces</li>
+            <li>Generics</li>
+            <li>Native UTF-8 support</li>
+            <li>Option Types</li>
+            <li>Automatic Reference Counting</li>
+            <li>Macro System</li>
+            <li>Directory Based Modules</li>
+            <li>Slices</li>
+            <li>Named Types</li>
+          </ul>
+          And more!
         </p>
       </div>
+
       <div class="one-half column">
         <h4>Hello, World!</h4>
-        <pre><code class="ark">#use std
+        <pre><code class="ark">// these wont be necessary when
+// we have a standard library
+[c] func printf(fmt: ^u8, ...) -> int;
+[c] func scanf(fmt: ^u8, ...);
 
-func main() -> int {
-    io::println("Hello, 世界!");
-    return 0;          
+func factorial(n: int) -> int {
+    if n == 0 {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+pub func main() -> int {
+    number: int = 1;
+    C::printf(c"Enter a number: \n");
+    C::scanf("%d", &number);
+
+    if number < 0 {
+        C::printf(c"No negatives please\n");
+        return -1;
+    }
+
+    result := factorial(number);
+    C::printf(c"%d! = %d\n", number, result);
+    return 0;
 }</code></pre>
+      </div>
+    </div>
+
+        <div class="row">
+      <div class="one-half column">
+        <h4></h4>
+        <video class="fitted" src="http://felixangell.com/video/ark-opengl.webm" autoplay>
+      </div>
+
+      <div class="one-half column">
+        <h4>Example</h4>
+        <p>
+          On the left is a simple program that renders a
+          rotating triangle using OpenGL. Currently the
+          language is an ongoing work in progress, but
+          this is a taste of what Ark is capable of doing.
+        </p> 
+        <p>
+          There are few programs written in Ark currently,
+          this website itself is actually using a simple 
+          &quot;web framework&quot; written in Ark to send HTML to the
+          web server (Nginx) via. the FastCGI protocol.
+        </p>
+        <p>
+          You can find the code for the graphics example
+          <a href="//github.com/ark-lang/ark-gl">here</a>,
+          and the code for the websites framework <a href="//github.com/0xbadb002/shelob">here</a>.
+        </p>
       </div>
     </div>
 
@@ -81,6 +146,65 @@ func main() -> int {
             <li>Writing documentation</li>
             <li>Your voice on Request For Comments (RFCs), or on IRC/SubReddit!</li>
           </ul>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="column">
+        <h4>Why Ark?</h4>
+        <p>
+          Before you write a language it's a good idea to look at existing languages and
+          see if they are suitable for your needs. I've gone over a few languages, and
+          pointed out why they don't really suit:
+        </p>
+        <h5>C++</h5>
+        <blockquote>
+          Within C++, there is a much smaller and cleaner language struggling to get out.
+          <br>&mdash; Bjarne Stroustrup
+        </blockquote>
+        <p>
+          C++ is notorious for being a very complicated language, that when used correctly 
+          is very powerful. It was designed to be backwards compatible with C, though this
+          was a key in C++ becoming the widely used language that it is today, it means 
+          that it inherits a lot of problems from the C language. In addition to this, 
+          when adopting the modern language features (i.e. smart pointers or auto declarations),
+          you are still encumbered by all the cruft present in the language. 
+          I do think that you can write a small subset of C++ (see the quote) for the language
+          to be somewhat pleasant to write software in, though I think at this point you may
+          as well stick to C.
+        </p>
+        <h5>Go</h5>
+        <p>
+          Go is quite a strong language, they do a lot right and have a fantastic engineering
+          team behind the language e.g. Rob Pike, Brian Kernighan, etc. Though the main flaw is
+          the garbage collection, which I understand their reason of adopting this (the language
+          was intended for server-side applications where programs have a very long lifespan
+          and can't leak memory), I prefer being able to manage the memory myself. Also there's
+          a few nitpicks like the package manager, access specified by the case of the identifier
+          of a declaration, etc.
+        </p>
+        <h5>Rust</h5>
+        <p>
+          Rust is very interesting, though the ownership model poses too much of a mental hurdle
+          when writing software.
+        </p>
+        <blockquote>
+          Reading any amount of Rust code evokes the joke "friends don't let friends skip leg day"
+          <br>&mdash; Andrei Alexandrescu
+        </blockquote>
+        <p>
+          In other words, Rust has focused a lot on security and this takes precedence over anything
+          else.
+        </p>
+        <h5>D</h5>
+        <p>
+          D has actually been one of my favourite languages recently, I particularly enjoy writing it,
+          though I still think it has it's flaws. Mainly that it takes too much after C++, though it's
+          nicer to write than C++, and there are lot of cases where there are multiple ways of doing
+          the same thing. Furthermore, it also has garbage collection and though this can be disabled,
+          a lot of the standard library and the languages features tie into the garbage collection.
         </p>
       </div>
     </div>
